@@ -1517,7 +1517,6 @@ ensure_context(GstVaapiDecoderH264 *decoder, GstH264SPS *sps)
     if (!reset_context && priv->has_context)
         return GST_VAAPI_DECODER_STATUS_SUCCESS;
 
-    /* XXX: fix surface size when cropping is implemented */
     info.profile    = priv->profile;
     info.entrypoint = priv->entrypoint;
     info.chroma_type = priv->chroma_type;

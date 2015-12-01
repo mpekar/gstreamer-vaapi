@@ -1521,8 +1521,8 @@ ensure_context(GstVaapiDecoderH264 *decoder, GstH264SPS *sps)
     info.profile    = priv->profile;
     info.entrypoint = priv->entrypoint;
     info.chroma_type = priv->chroma_type;
-    info.width      = sps->width;
-    info.height     = sps->height;
+    info.width      = sps->crop_rect_width;
+    info.height     = sps->crop_rect_height;
     info.ref_frames = dpb_size;
 
     if (!gst_vaapi_decoder_ensure_context(GST_VAAPI_DECODER(decoder), &info))
